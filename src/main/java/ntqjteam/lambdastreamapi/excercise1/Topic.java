@@ -28,5 +28,12 @@ public class Topic {
     public String getDescription() {
         return description;
     }
-
+    
+    @Override
+    public boolean equals(Object obj) {
+    	Topic inputTopic = (Topic) obj;
+		return this.id.equals(inputTopic.getId()) && this.name.equals(inputTopic.getName())
+				&& this.description.equals(inputTopic.getDescription());
+    }
+    
 }
